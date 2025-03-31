@@ -62,3 +62,17 @@ Ego4d_TalkNet_ASD/
 │           │   └── audio_f000000_f000449.wav
 │           ...
 └── prepare_ego4d_clips_timestamps.py # Your script
+
+
+new data in dataset is use to agile frame from 0001.jpg to 0000.jpg
+and the genejson will use like
+│   └── val/
+│       └── {video_id_from_val_list}/
+│           ├── clip_f000000/
+│           │   ├── frames/
+│           │   └── audio_f000000_f000449.wav
+to generate the according file to make the full dataset
+
+when we need to change the clip length, the newdata.py will be used
+and then we use the rename to remake the name of jpgs
+and then we use the genejson to get new json train.
